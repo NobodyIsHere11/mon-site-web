@@ -1,68 +1,133 @@
+/* Reset de base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #333;
 }
 
+/* En-tête */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px 0;
     text-align: center;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2575fc;
+}
+
+/* Contenu principal */
 main {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-
+/* Formulaire */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 label {
     margin: 10px 0 5px;
+    font-weight: 500;
+    color: #555;
 }
 
 input {
-    padding: 8px;
-    margin-bottom: 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #2575fc;
+    outline: none;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 12px 24px;
+    background-color: #2575fc;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 5px;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #1a5bbf;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button[type="reset"] {
+    background-color: #ff4b5c;
+}
+
+button[type="reset"]:hover {
+    background-color: #e43a4a;
+}
+
+/* Pied de page */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Effets supplémentaires */
+h2 {
+    color: #2575fc;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
 }
